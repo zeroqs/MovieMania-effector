@@ -8,6 +8,9 @@ dependencies:
   '@farfetched/core':
     specifier: ^0.12.4
     version: 0.12.4(effector@23.2.2)
+  '@farfetched/runtypes':
+    specifier: ^0.12.4
+    version: 0.12.4(@farfetched/core@0.12.4)(runtypes@6.7.0)
   '@mantine/core':
     specifier: ^7.11.1
     version: 7.11.1(@mantine/hooks@7.11.1)(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
@@ -47,6 +50,9 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  runtypes:
+    specifier: ^6.7.0
+    version: 6.7.0
 
 devDependencies:
   '@types/node':
@@ -665,6 +671,16 @@ packages:
       effector: ^23.0.0
     dependencies:
       effector: 23.2.2
+    dev: false
+
+  /@farfetched/runtypes@0.12.4(@farfetched/core@0.12.4)(runtypes@6.7.0):
+    resolution: {integrity: sha512-x7lCiDzX25aSY15TrFtUaUMwJUsClcWphEMoGuPGo0akclCFJw9x2tki/W4vXJomcg6HFjaMbv11w/F1XUMbUA==}
+    peerDependencies:
+      '@farfetched/core': 0.12.4
+      runtypes: ^6.6.0
+    dependencies:
+      '@farfetched/core': 0.12.4(effector@23.2.2)
+      runtypes: 6.7.0
     dev: false
 
   /@floating-ui/core@1.6.4:
@@ -3587,6 +3603,10 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
     dev: true
+
+  /runtypes@6.7.0:
+    resolution: {integrity: sha512-3TLdfFX8YHNFOhwHrSJza6uxVBmBrEjnNQlNXvXCdItS0Pdskfg5vVXUTWIN+Y23QR09jWpSl99UHkA83m4uWA==}
+    dev: false
 
   /safe-array-concat@1.0.1:
     resolution: {integrity: sha512-6XbUAseYE2KtOuGueyeobCySj9L4+66Tn6KQMOPQJrAJEowYKW/YR/MGJZl7FdydUdaFu4LYyDZjxf4/Nmo23Q==}

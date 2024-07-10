@@ -1,8 +1,8 @@
-import { Autocomplete, Burger, Group, rem, Text } from '@mantine/core'
+import { Burger, Group, Text } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import { IconSearch } from '@tabler/icons-react'
 import { Link } from 'atomic-router-react'
 
+import { Search } from '@/features/search/Search'
 import { routes } from '@/shared/routing/index'
 
 import classes from './header.module.css'
@@ -26,26 +26,8 @@ export const Header = () => {
               Movies
             </Text>
           </Group>
-          <Autocomplete
-            className={classes.search}
-            placeholder="Search"
-            leftSection={
-              <IconSearch
-                style={{ width: rem(16), height: rem(16) }}
-                stroke={1.5}
-              />
-            }
-            data={[
-              'React',
-              'Angular',
-              'Vue',
-              'Next.js',
-              'Riot.js',
-              'Svelte',
-              'Blitz.js',
-            ]}
-            visibleFrom="xs"
-          />
+
+          <Search />
         </Group>
       </div>
     </header>
