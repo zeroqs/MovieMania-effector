@@ -6,7 +6,6 @@ import {
 } from '@mantine/core'
 import { useUnit } from 'effector-react'
 
-import NotFoundPoster from '@/../public/nopic.png'
 import { $searchResults } from '@/features/search/model'
 import { ImageLazy } from '@/shared/ui/Image'
 import { MovieRating } from '@/shared/ui/MovieRating'
@@ -23,19 +22,16 @@ export const AutoCompleteOption = ({
   return (
     <Flex gap="sm" w="100%">
       <div style={{ width: 100, height: 150 }}>
-        <ImageLazy
-          radius="md"
-          w={100}
-          h={150}
-          src={movie.poster.url || NotFoundPoster}
-        />
+        <ImageLazy radius="md" w={100} h={150} src={movie.poster.url} />
       </div>
       <Flex w="100%" justify="space-between">
         <Title w="90%" order={3}>
           {movie.name}
         </Title>
 
-        <MovieRating internalRating={movie.internalRating} />
+        <MovieRating
+          internalRating={movie.internalRating ?? movie.rating.imdb}
+        />
       </Flex>
     </Flex>
   )

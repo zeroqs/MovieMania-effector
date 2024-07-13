@@ -1,4 +1,4 @@
-import { Badge } from '@mantine/core'
+import { Badge, Title } from '@mantine/core'
 
 interface MovieRatingProps {
   internalRating: number
@@ -11,21 +11,21 @@ export const MovieRating = ({ internalRating }: MovieRatingProps) => {
     case internalRating > 6:
       content = (
         <Badge color="green" radius="sm">
-          {Math.floor(internalRating)}
+          <Title order={6}>{Math.floor(internalRating)}</Title>
         </Badge>
       )
       break
     case internalRating < 7 && internalRating > 5:
       content = (
         <Badge color="gray" radius="sm">
-          {Math.floor(internalRating)}
+          <Title order={6}>{Math.floor(internalRating)}</Title>
         </Badge>
       )
       break
     default:
       content = (
         <Badge color="red" radius="sm">
-          {Math.floor(internalRating)}
+          <Title order={6}>{Math.floor(internalRating)}</Title>
         </Badge>
       )
       break

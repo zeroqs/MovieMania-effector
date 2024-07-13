@@ -2,13 +2,11 @@ import { createJsonQuery, declareParams } from '@farfetched/core'
 import { runtypeContract } from '@farfetched/runtypes'
 import { combine, createEvent, createStore, sample } from 'effector'
 import { debounce, or } from 'patronum'
-import { Array, Record, Static } from 'runtypes'
+import { Array, Record } from 'runtypes'
 
-import { searchContract } from '@/features/search/contract'
+import { searchContract, SearchResult } from '@/features/search/contract'
 import { baseUrl } from '@/shared/api/config'
 import { routes } from '@/shared/routing'
-
-type SearchResult = Static<typeof searchContract>;
 
 export const searchChanged = createEvent<string>()
 export const clearResults = createEvent()

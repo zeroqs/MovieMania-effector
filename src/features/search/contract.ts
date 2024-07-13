@@ -1,4 +1,4 @@
-import { Array, Null, Number, Record, String } from 'runtypes'
+import { Array, Null, Number, Record, Static, String } from 'runtypes'
 
 export const searchContract = Record({
   id: Number,
@@ -15,5 +15,7 @@ export const searchContract = Record({
     filmCritics: Number,
   }),
   genres: Array(Record({ name: String })),
-  internalRating: Number,
+  internalRating: Number.optional(),
 })
+
+export type SearchResult = Static<typeof searchContract>
