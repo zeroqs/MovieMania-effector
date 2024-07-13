@@ -1,6 +1,6 @@
 import { Card, Group, Skeleton, Text } from '@mantine/core'
 
-import { MoviesListResult } from '@/pages/Home/contract'
+import { MoviesListResult } from '@/pages/Movies/contract'
 import { ImageLazy } from '@/shared/ui/Image'
 import { MovieGenres } from '@/shared/ui/MovieGenres'
 import { MovieRating } from '@/shared/ui/MovieRating'

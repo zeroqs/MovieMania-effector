@@ -1,12 +1,8 @@
 import { Flex, Select } from '@mantine/core'
 import { useUnit } from 'effector-react'
 
-import { $genreType, $loading, chanedGenreType } from '@/pages/Home/model'
-import {
-  GenreType,
-  movieFilterGenreValues,
-  movieFilterValues,
-} from '@/shared/constants'
+import { $genreType, $loading, chanedGenreType } from '@/pages/Movies/model'
+import { GenreType, movieFilterGenreValues } from '@/shared/constants'
 
 export const MovieFilter = () => {
   const [genreValue, loading] = useUnit([$genreType, $loading])

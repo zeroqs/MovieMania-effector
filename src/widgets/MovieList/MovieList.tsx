@@ -1,7 +1,7 @@
 import { Grid } from '@mantine/core'
 import { useList, useUnit } from 'effector-react'
 
-import { $loading, $movieList } from '@/pages/Home/model'
+import { $loading, $movieList } from '@/pages/Movies/model'
 import { MovieCard, MovieCardSkeleton } from '@/shared/ui/MovieCard'
 
 export const MovieList = () => {
