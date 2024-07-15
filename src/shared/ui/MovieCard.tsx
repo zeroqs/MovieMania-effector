@@ -1,6 +1,9 @@
 import { Card, Group, Skeleton, Text } from '@mantine/core'
+import { RouteInstance } from 'atomic-router'
+import { Link } from 'atomic-router-react'
 
 import { MoviesListResult } from '@/pages/Movies/contract'
+import { routes } from '@/shared/routing'
 import { ImageLazy } from '@/shared/ui/Image'
 import { MovieGenres } from '@/shared/ui/MovieGenres'
 import { MovieRating } from '@/shared/ui/MovieRating'
@@ -14,9 +17,9 @@ export const MovieCard = ({ ...props }: MoviesListResult) => {
     <Card
       shadow="sm"
       padding="md"
-      component="a"
-      href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      target="_blank"
+      component={Link}
+      to={routes.movie as RouteInstance<any>}
+      params={{ id: props.id }}
     >
       <Card.Section>
         <ImageLazy src={props.backdrop.url} h={180} />
@@ -34,7 +37,7 @@ export const MovieCard = ({ ...props }: MoviesListResult) => {
       </Text>
 
       <Group mt="xs" mb="xs" gap={5}>
-        <MovieGenres genres={props.genres} />
+        <MovieGenres withPlus genres={props.genres} />
       </Group>
     </Card>
   )

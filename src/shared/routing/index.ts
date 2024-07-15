@@ -11,6 +11,7 @@ import { appStarted } from '@/shared/config/init'
 export const routes = {
   home: createRoute(),
   movies: createRoute(),
+  movie: createRoute<{ id: string }>(),
   auth: {
     register: createRoute(),
     login: createRoute(),
@@ -28,6 +29,10 @@ export const router = createHistoryRouter({
     {
       path: '/movies',
       route: routes.movies,
+    },
+    {
+      path: '/movie/:id',
+      route: routes.movie,
     },
     {
       path: '/login',

@@ -4,10 +4,10 @@ import { BaseLayout } from '@/shared/ui/BaseLayout'
 
 import { currentRoute } from './model'
 
-export const MoviesPage = lazy(() => import('./Movies'))
+const MoviePage = lazy(() => import('./Movie'))
 
-export const MoviesRoute = {
-  view: MoviesPage,
+export const MovieRoute = {
+  view: MoviePage,
   route: currentRoute,
   layout: BaseLayout,
 }

@@ -1,4 +1,5 @@
 import '@mantine/core/styles.css'
+import '@mantine/carousel/styles.css'
 
 import { attachLogger } from 'effector-logger'
 import ReactDOM from 'react-dom/client'
